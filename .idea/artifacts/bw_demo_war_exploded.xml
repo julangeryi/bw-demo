@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bw-demo:war exploded">
+    <output-path>$PROJECT_DIR$/target/bw-demo</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bw-demo" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="E:\Idea\IntelliJIDEA\workspace\bw-demo\target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="bw-demo/web/Web" />
+    </root>
+  </artifact>
+</component>

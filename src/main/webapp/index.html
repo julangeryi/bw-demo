@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Enable IE9 Standards mode -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta charset="UTF-8"/>
+		<title>Cloud Control Center for SAP Business One</title>
+		<link rel="icon" href="css/img/icon.png" />
+		<link rel="stylesheet" href="css/default.css" media="all" type="text/css" />
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="css/default_ie.css" media="all" /><![endif]-->
+		<script src="js/jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/datajs-1.0.3.min.js" type="text/javascript"></script>
+		<script src="js/resources/c3L10N.js" type="text/javascript"></script>
+		<script src="js/controlcenter.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function () {
+				document.title = localizedString("CLOUDCONTROLCENTER");
+
+				$("#noscript").remove();
+				$("#nooperator").hide();
+				
+				if ($.browser.msie && parseInt($.browser.version) < 10) {
+					$("#nohtml5").show();
+				} else {
+					$("#nohtml5").remove();
+					var c3 = new c3init();
+					c3.init();
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<p id="noscript">JavaScript must be enabled in order for you to use BusinessOne Cloud Control Center. However, it seems JavaScript is either disabled or not supported by your browser. To use BusinessOne Cloud Control Center, enable JavaScript by changing your browser options, then try again.</p>
+		<p id="nohtml5">You are currently using an unsupported browser. To access Cloud Control Center, use Mozilla Firefox 7.0 or later.</p>
+		<div id="nooperator">
+			<p>You already login with an user who does not have relevant authorization. To access Cloud Control Center, please <a id ="nooperatorlogout" href="#">Logoff</a> first</p>
+		</div>
+	</body>
+</html>
